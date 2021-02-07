@@ -6,7 +6,7 @@ var currentSlider = document.getElementById("volume-slider");
 var currentVolume = document.getElementById("volume-number");
 var soundVersion = document.getElementById("horn-sound");
 var soundImage = document.getElementById("sound-image");
-var soundTypeInput = document.getElementById("radio-air-horn")
+var soundTypeInput = document.getElementById("radio-air-horn");
 currentVolume.addEventListener("input", volChange);
 //soundTypeInput.addEventListener("click", typeChange);
 
