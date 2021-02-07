@@ -34,6 +34,7 @@ var currentSlider = document.getElementById("volume-slider");
 var currentVolume = document.getElementById("volume-number");
 var soundVersion = document.getElementById("horn-sound");
 var volumeImage = document.getElementById("volume-image");
+var honkButton = document.getElementById("honk-btn");
 currentVolume.addEventListener("change", volChange);
 currentSlider.addEventListener("change", slideChange);
 
@@ -43,21 +44,25 @@ function volChange(){
         soundVersion.volume = currentVolume.value / 100;
         currentSlider.value = currentVolume.value;
         volumeImage.src = "./assets/media/icons/volume-level-3.svg";
+        honkButton.disabled = false;
   }
   else if(currentVolume.value > 33 && currentVolume.value <= 66){
         soundVersion.volume = currentVolume.value / 100;
         currentSlider.value = currentVolume.value;
         volumeImage.src = "./assets/media/icons/volume-level-2.svg";
+        honkButton.disabled = false;
   }
   else if(currentVolume.value > 0 && currentVolume.value <= 33){
         soundVersion.volume = currentVolume.value / 100;
         currentSlider.value = currentVolume.value;
         volumeImage.src = "./assets/media/icons/volume-level-1.svg";
+        honkButton.disabled = false;
   }
   else if(currentVolume.value == 0){
         soundVersion.volume = currentVolume.value / 100;
         currentSlider.value = currentVolume.value;
         volumeImage.src = "./assets/media/icons/volume-level-0.svg";
+        honkButton.disabled = true;
   }
 }
 
@@ -67,20 +72,24 @@ function slideChange(){
         soundVersion.volume = currentSlider.value / 100;
         currentVolume.value = currentSlider.value;
         volumeImage.src = "./assets/media/icons/volume-level-3.svg";
+        honkButton.disabled = false;
   }
   else if(currentSlider.value > 33 && currentSlider.value <= 66){
         soundVersion.volume = currentSlider.value / 100;
         currentVolume.value = currentSlider.value;
         volumeImage.src = "./assets/media/icons/volume-level-2.svg";
+        honkButton.disabled = false;
   }
   else if(currentSlider.value > 0 && currentSlider.value <= 33){
         soundVersion.volume = currentSlider.value / 100;
         currentVolume.value = currentSlider.value;
         volumeImage.src = "./assets/media/icons/volume-level-1.svg";
+        honkButton.disabled = false;
   }
   else if(currentSlider.value == 0){
         soundVersion.volume = currentSlider.value / 100;
         currentVolume.value = currentSlider.value;
         volumeImage.src = "./assets/media/icons/volume-level-0.svg";
+        honkButton.disabled = true;
   }
 }
