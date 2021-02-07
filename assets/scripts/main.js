@@ -2,6 +2,10 @@
 
 // TODO
 
+document.getElementById("honk-btn").addEventListener("submit", function(event){
+   event.preventDefault()
+});
+/*
 var currentSlider = document.getElementById("volume-slider");
 var currentVolume = document.getElementById("volume-number");
 var soundVersion = document.getElementById("horn-sound");
@@ -29,3 +33,4 @@ function volChange(currentVolume){
         currentSlider.value = currentVolume.value;
   }
 }
+*/
