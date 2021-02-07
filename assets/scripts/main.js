@@ -78,8 +78,8 @@ function slideChange(){
         currentVolume.value = currentSlider.value;
         volumeImage.src = "./assets/media/icons/volume-level-1.svg";
   }
-  else if(currentVolume.value == 0){
-        soundSlider.volume = currentSlider.value / 100;
+  else if(currentSlider.value == 0){
+        soundVersion.volume = currentSlider.value / 100;
         currentVolume.value = currentSlider.value;
         volumeImage.src = "./assets/media/icons/volume-level-0.svg";
   }
