@@ -35,7 +35,7 @@ var currentVolume = document.getElementById("volume-number");
 var soundVersion = document.getElementById("horn-sound");
 var volumeImage = document.getElementById("volume-image");
 currentVolume.addEventListener("change", volChange);
-//currentSlider.addEventListener("change", slideChange);
+currentSlider.addEventListener("change", slideChange);
 
 function volChange(){
    
@@ -61,3 +61,26 @@ function volChange(){
   }
 }
 
+function slideChange(){
+   
+  if(currentSlider.value > 66 && currentSlider.value <= 100){
+        soundVersion.volume = currentSlider.value / 100;
+        currentVolume.value = currentSlider.value;
+        volumeImage.src = "./assets/media/icons/volume-level-3.svg";
+  }
+  else if(currentSlider.value > 33 && currentSlider.value <= 66){
+        soundVersion.volume = currentSlider.value / 100;
+        currentVolume.value = currentSlider.value;
+        volumeImage.src = "./assets/media/icons/volume-level-2.svg";
+  }
+  else if(currentSlider.value > 0 && currentSlider.value <= 33){
+        soundVersion.volume = currentSlider.value / 100;
+        currentVolume.value = currentSlider.value;
+        volumeImage.src = "./assets/media/icons/volume-level-1.svg";
+  }
+  else if(currentVolume.value == 0){
+        soundVersion.volume = currentSlider.value / 100;
+        currentVolume.value = currentSlider.value;
+        volumeImage.src = "./assets/media/icons/volume-level-0.svg";
+  }
+}
