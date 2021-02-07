@@ -6,29 +6,23 @@ var soundImg = document.getElementById("sound-image");
 document.getElementById("radio-air-horn").addEventListener("click", radAir);
 
 function radAir(){
-soundImg.src = "./assets/media/images/air-horn.svg";
-document.getElementById("horn-sound").src = "./assets/media/audio/air-horn.mp3";
+   soundImg.src = "./assets/media/images/air-horn.svg";
+   document.getElementById("horn-sound").src = "./assets/media/audio/air-horn.mp3";
 }
 
 document.getElementById("radio-car-horn").addEventListener("click", radCar);
 
 function radCar(){
-soundImg.src = "./assets/media/images/car.svg";
-document.getElementById("horn-sound").src = "./assets/media/audio/car-horn.mp3";
+   soundImg.src = "./assets/media/images/car.svg";
+   document.getElementById("horn-sound").src = "./assets/media/audio/car-horn.mp3";
 }
 
 document.getElementById("radio-party-horn").addEventListener("click", radParty);
 
 function radParty(){
-soundImg.src = "./assets/media/images/party-horn.svg";
-document.getElementById("horn-sound").src = "./assets/media/audio/party-horn.mp3";
+   soundImg.src = "./assets/media/images/party-horn.svg";
+   document.getElementById("horn-sound").src = "./assets/media/audio/party-horn.mp3";
 }
-   
-/*
-document.getElementById("honk-btn").addEventListener("submit", function(event){
-   event.preventDefault()
-});
-*/
 
 var currentSlider = document.getElementById("volume-slider");
 var currentVolume = document.getElementById("volume-number");
@@ -37,6 +31,10 @@ var volumeImage = document.getElementById("volume-image");
 var honkButton = document.getElementById("honk-btn");
 currentVolume.addEventListener("change", volChange);
 currentSlider.addEventListener("change", slideChange);
+honkButton.addEventListener("submit", function(event){
+   event.preventDefault();  
+});
+//honkButton.addEventListener("submit", playHonk);
 
 function volChange(){
    
@@ -92,4 +90,8 @@ function slideChange(){
         volumeImage.src = "./assets/media/icons/volume-level-0.svg";
         honkButton.disabled = true;
   }
+}
+/*
+function playHonk(){
+   soundVersion.play();
 }
