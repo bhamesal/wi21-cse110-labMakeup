@@ -37,7 +37,7 @@ var volumeImage = document.getElementById("volume-image");
 currentVolume.addEventListener("change", volChange);
 //currentSlider.addEventListener("change", slideChange);
 
-function volChange(currentVolume){
+function volChange(){
    
   if(currentVolume.value > 66 && currentVolume.value <= 100){
         soundVersion.volume = currentVolume.value / 100;
