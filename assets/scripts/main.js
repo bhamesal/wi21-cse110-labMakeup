@@ -91,7 +91,7 @@ function slideChange(){
         honkButton.disabled = true;
   }
 }
-/*
-function playHonk(){
-   soundVersion.play();
-}
+
+//function playHonk(){
+   //soundVersion.play();
+//}
