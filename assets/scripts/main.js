@@ -41,22 +41,22 @@ function volChange(currentVolume){
   if(currentVolume.value > 66 && currentVolume.value <= 100){
         soundVersion.value = currentVolume.value;
         currentSlider.value = currentVolume.value;
-        soundImage.src = "./assets/media/icons/volume-level-3.svg"
+        soundImage.src = "./assets/media/icons/volume-level-3.svg";
   }
   else if(currentVolume.value > 33 && currentVolume.value <= 66){
         soundVersion.value = currentVolume.value;
         currentSlider.value = currentVolume.value;
-        soundImage.src = "./assets/media/icons/volume-level-2.svg"
+        soundImage.src = "./assets/media/icons/volume-level-2.svg";
   }
   else if(currentVolume.value > 0 && currentVolume.value <= 33){
         soundVersion.value = currentVolume.value;
         currentSlider.value = currentVolume.value;
-        soundImage.src = "./assets/media/icons/volume-level-1.svg"
+        soundImage.src = "./assets/media/icons/volume-level-1.svg";
   }
   else if(currentVolume.value == 0){
         soundVersion.value = currentVolume.value;
         currentSlider.value = currentVolume.value;
-        soundImage.src = "./assets/media/icons/volume-level-0.svg"
+        soundImage.src = "./assets/media/icons/volume-level-0.svg";
   }
 }
 
