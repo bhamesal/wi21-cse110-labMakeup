@@ -31,8 +31,9 @@ var volumeImage = document.getElementById("volume-image");
 var honkButton = document.getElementById("honk-btn");
 currentVolume.addEventListener("change", volChange);
 currentSlider.addEventListener("change", slideChange);
-honkButton.addEventListener("submit", function(submit){
-   submit.preventDefault();  
+document.getElementById("party-horn-form").addEventListener("submit", function(event){
+   event.preventDefault();
+   soundVersion.play();
 });
 //honkButton.addEventListener("submit", playHonk);
 
