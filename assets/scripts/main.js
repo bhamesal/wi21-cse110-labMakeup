@@ -189,7 +189,7 @@ currentVolume.addEventListener("change", boundCheck);
 
 function boundCheck(){
    if(currentVolume.value > 100){
-      throw new OutOfBoundsError("Error: Volume set to over 100);
+      throw new OutOfBoundsError("Error: Volume set to over 100");
    }
 }
                                  
