@@ -93,6 +93,10 @@ function slideChange(){
   }
 }
 
-//function playHonk(){
-   //soundVersion.play();
-//}
+//LAB MAKEUP ADDITIONS
+
+document.getElementById("log-btn").addEventListener("click", logTest);
+
+function logTest(){
+   console.log("Log Test Passed");
+}
