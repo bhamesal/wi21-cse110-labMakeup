@@ -100,3 +100,71 @@ document.getElementById("log-btn").addEventListener("click", logTest);
 function logTest(){
    console.log("Log Test Passed");
 }
+
+document.getElementById("error-btn").addEventListener("click", errorTest);
+
+function errorTest(){
+   console.error("Error Button Pushed");
+}
+
+document.getElementById("table-btn").addEventListener("click", tableTest);
+
+function tableTest(){
+   console.table([
+   {
+    subject: 'CSE',
+    code: '110',
+   },
+   {
+    subject: 'CSE',
+    code: '30',
+   },
+   {
+    subject: 'CHEM',
+    code: '168',
+   }
+ ]);
+}
+
+document.getElementById("dir-btn").addEventListener("click", dirTest);
+
+function dirTest(){
+   console.dir(document.head);
+}
+
+document.getElementById("dirxml-btn").addEventListener("click", dirxmlTest);
+
+function dirxmlTest(){
+   console.dirxml(document);
+}
+
+document.getElementById("group-btn").addEventListener("click", groupTest);
+
+function groupTest(){
+   const famous = 'Famous Actor Names';
+   console.group(famous);
+   console.info('Arnold Schwarzeneggar');
+   console.info('Tom Cruise');
+   console.info('Robert Downey Jr.');
+   console.groupEnd(famous);
+}
+
+document.getElementById("time-btn").addEventListener("click", timeTest);
+
+function timeTest(){
+   console.time();
+   for (var i = 0; i < 50000; i++) {
+      let j = i + 2;
+   }
+   console.timeEnd();
+}
+
+document.getElementById("trace-btn").addEventListener("click", traceTest);
+
+function traceTest(){
+   const charmander = () => { bulbasaur(); };
+   const bulbasaur = () => { squirtle(); };
+   const squirtle = () => { pikachu(); };
+   const pikachu = () => { console.trace(); };
+   charmander();
+}
