@@ -168,3 +168,28 @@ function traceTest(){
    const pikachu = () => { console.trace(); };
    charmander();
 }
+
+try{
+   alert('Start of try');
+   volModifier;
+   alert('End of try');
+}
+catch(err){
+   alert(err);
+}
+
+class OutOfBoundsError extends Error{
+ constructor(message) {
+    super(message);
+    this.name = "OutOfBoundsError";
+ }
+}
+
+currentVolume.addEventListener("change", boundCheck);
+
+function boundCheck(){
+   if(currentVolume.value > 100){
+      throw new OutOfBoundsError("Error: Volume set to over 100);
+   }
+}
+                                 
